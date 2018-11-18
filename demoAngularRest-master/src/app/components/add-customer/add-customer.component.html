@@ -1,0 +1,37 @@
+
+
+<div ng-controller="teste">
+<div class="col">
+  <h2 class="text-center">Inserir Cliente</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="nomeCliente">Nome:</label>
+      <input formControlName="nomeCliente" placeholder="Nome" 
+      name="nomeCliente" class="form-control" id="nomeCliente" ng-required="Required">
+    </div>
+
+    <div class="form-group">
+      <label for="limiteCredito">Limite Credito:</label>
+      <input formControlName="limiteCredito"
+       placeholder="Limite Credito"
+        name="limiteCredito" class="form-control" 
+        id="limiteCredito" required>
+    </div>
+
+    <div class="form-group">
+    <label for="singleSelect"> Risco </label><br>
+    <select name="risco" id="risco" 
+    ng-model="data.singleSelect" id="risco" name="risco" class="form-control" required>
+      <option value="">---Selecione o Risco ---</option> 
+      <option value="{{risco.a}}">A - 0% </option> 
+      <option value="{{risco.b}}">B - 10% </option>
+      <option value="{{risco.c}}">C - 20% </option>
+    </select><br>
+  </div>
+    <button class="btn btn-success">Aceitar</button>
+    <button class="btn btn-primary" 
+    routerLink="list-customer">Voltar</button>
+  </form>
+</div>
+</div>

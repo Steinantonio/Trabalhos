@@ -1,0 +1,30 @@
+<div class="col">
+    <h2 class="text-center">Editar Cliente</h2>
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+  
+      <div class="form-group">
+        <label for="nomeCliente">Nome:</label>
+        <input formControlName="nomeCliente" placeholder="Nome" 
+        name="nomeCliente" class="form-control" id="nomeCliente" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="limiteCredito">Limite Credito:</label>
+        <input formControlName="limiteCredito"
+         placeholder="Limite Credito"
+          name="limiteCredito" class="form-control" 
+          id="limiteCredito" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="risco">Risco:</label>
+        <input type="risco" formControlName="risco" 
+        placeholder="Risco" name="risco" class="form-control" 
+        id="risco" required>
+      </div>
+  
+      <button class="btn btn-success">Aceitar</button>
+      <button class="btn btn-primary" 
+      routerLink="list-customer">Voltar</button>
+    </form>
+  </div>
