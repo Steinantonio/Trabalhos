@@ -1,13 +1,8 @@
-# Este es un ejemplo de como crear servicios REST usando el Spring Framework 5 con Spring Boot 2 para un CRUD de Clientes
-
-1. Es necesario tener instalado MySQL y MySQL Workbench
-
-2. Ingresamos como root a MySQL y creamos un nuevo usuario, con las siguientes sentencias SQL:
-```sql
+# Este 
+1. 
 CREATE USER 'springstudent'@'localhost' IDENTIFIED BY 'springstudent';
 GRANT ALL PRIVILEGES ON * . * TO 'springstudent'@'localhost';
 ```
-3. Creamos una base de datos o schema llamada 'web_customer_tracker' y posteriormente la tabla 'customer', agregamos el siguiente código:
 ```sql
 CREATE DATABASE  IF NOT EXISTS `web_customer_tracker` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `web_customer_tracker`;
