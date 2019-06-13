@@ -15,7 +15,7 @@ class App extends React.Component {
             params: {
                 q: inputText,
                 part: "snippet",
-                maxResults: 5,
+                maxResults: 15,
                 key: KEY
             }
         });

@@ -22,7 +22,7 @@ const VideoDetail = ({SelectedVideo}) => {
                  <h4 className={"ui header"}>{SelectedVideo.snippet.title}</h4>
                 
                  <div className={"ui embed"}>
-                     <iframe src={videoSrc} title={"VideoPlayer"}/>
+                     <iframe src={videoSrc} title={"VideoPlayer"} allowFullScreen={true}/>
                  </div>
                  
                  <p>{SelectedVideo.snippet.description}</p>
