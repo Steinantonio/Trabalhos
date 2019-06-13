@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {connect} from "react-redux";
 import {fetchStreams} from "../actions";
 import {Link} from "react-router-dom";
@@ -16,7 +16,7 @@ class StreamList extends React.Component {
             return (
                  <div className={"right floated content"}>
                      <Link className={"ui button primary"} to={`/streams/edit/${stream.id}`}>Edit</Link>
-                     <button className={"ui button negative"}>Delete</button>
+                     <Link className={"ui button negative"} to={`/streams/delete/${stream.id}`}>Delete</Link>
                  </div>
             );
         }
@@ -65,7 +65,6 @@ class StreamList extends React.Component {
         );
     };
 };
-
 
 
 const mapStateToProps = (state) => {

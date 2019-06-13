@@ -13,6 +13,11 @@ const Header = () => {
                  </div>
                  
                  
+                 <div className={"item"}>
+                     <Link to={"/"} className={"item"}>
+                         <p >AllStreams</p>
+                     </Link>
+                 </div>
                  
                  <div className={"item"}>
                  <GoogleAuth/>

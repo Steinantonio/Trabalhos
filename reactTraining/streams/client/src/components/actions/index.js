@@ -32,7 +32,6 @@ export const fetchStreams = () => {
     return async (dispatch) => {
         const response = await streams.get('/streams');
         dispatch({type: 'FETCH_STREAMS', payload: response.data});
-        console.log(response.data);
     };
     
 };
@@ -48,15 +47,18 @@ export const fetchSingle = (id) => {
 
 export const updateStream = (id, formValues) => {
     return async (dispatch) => {
-        const response = await streams.put(`/streams/${id}`, formValues);
+        const response = await streams.patch(`/streams/${id}`, formValues);
         dispatch({type: 'EDIT_STREAM', payload: response.data})
         history.push('/');
     };
 };
 
-export const deleteStream = (id) => {
-    return async (dispatch) => {
-        await streams.delete(`/stream/${id}`);
-        dispatch({type: 'DELETE_STREAM', payload: id});
-    };
+export const deleteStream = id => async dispatch => {
+    await streams.delete(`/streams/${id}`);
+    
+    dispatch({ type: 'DELETE_STREAM', payload: id });
+    history.push('/');
 };
+
+
+
