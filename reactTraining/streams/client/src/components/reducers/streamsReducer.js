@@ -13,6 +13,9 @@ export default (state = {}, action) => {
         
         case 'EDIT_STREAM':
             return {...state, [action.payload.id]: action.payload};
+            
+        case 'DELETE_STREAM':
+            return  _.omit(state, action.payload);
             //[action.payload.id] this is a dynamic key, its only creating an key for action.paylod, just like if i hardcoded it
         default:
             return state;

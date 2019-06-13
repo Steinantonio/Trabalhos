@@ -1,3 +1,16 @@
 {
-  "streams": []
+  "streams": [
+    {
+      "title": "MyFirst Stream boys",
+      "description": "gogo ",
+      "user_id": "115280838246791228321",
+      "id": 1
+    },
+    {
+      "title": "Gameplay and Chill Lets go",
+      "description": "Lets go boys ",
+      "user_id": "115280838246791228321",
+      "id": 2
+    }
+  ]
 }

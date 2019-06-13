@@ -23,7 +23,6 @@ export const createStream = (formValues) => {
         const response = await streams.post('/streams', {...formValues, user_id});
         dispatch({type: 'CREATE_STREAM', payload: response.data});
         history.push('/');
-        alert("Created Sucessfully");
     };
 };
 
