@@ -29,4 +29,4 @@ StreamKey : STREAM_ID in my case : 1  ( just the number, nothing else.)
 
 After that just press start streaming you should see your stream up and going.
 
-This was made for learning purposes. Thanks :D 
+This was made for learning purposes. Thanks :D
